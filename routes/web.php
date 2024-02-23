@@ -2,6 +2,11 @@
 
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\{
+    IndexController,
+    AssociatesController,
+};
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,21 +18,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    echo (new \App\Http\Controllers\Controller())->index();
-});
-Route::get('/assosier', function () {
-    echo (new \App\Http\Controllers\AssocierControlleurs)->index();
-});
-Route::get('/assosier-creer', function () {
-    echo (new \App\Http\Controllers\AssocierControlleurs)->create();
-});
-Route::post('/assosier-creer-2', function () {
-    echo (new \App\Http\Controllers\AssocierControlleurs)->store();
-});
-Route::get('/assosier-show', function () {
-    echo (new \App\Http\Controllers\AssocierControlleurs)->show();
-});
-Route::get('/assosier-detruite', function () {
-    echo (new \App\Http\Controllers\AssocierControlleurs)->delete();
-});
+// Index Page
+Route::get('/',[IndexController::class,'index'])
+->name('index');
+
+// Associates Pages
+Route::get('/associates/index',[AssociatesController::class,'index'])
+->name('associates.index');
+
+Route::get('/associates/create',[AssociatesController::class,'create'])
+->name('associates.create');
+
+Route::delete('/associates/delete/{id}',[AssociatesController::class,'delete'])
+->name('associates.delete');

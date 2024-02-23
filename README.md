@@ -1,7 +1,6 @@
 ## TP Laravel 2h
 - Dépôt du code (sans dossier vendor) sur un GitHub PUBLIC.
-- Envoi du lien de votre GitHub à votre intervenant.
-- 
+- Envoi du lien de votre GitHub à votre intervenant 
 
 
 ### EN - Pepina App
@@ -44,4 +43,3 @@
 - J'ai supprimé une clé des variables env pour la base de données mais je ne me souviens plus laquelle.
 - J'avais mal compris, mais le gars de l'association voulait créer et supprimer des 'membres', mais je l'ai confondu avec le fait de les lier, et j'ai parfois utilisé des utilisateurs, donc je n'ai pas créé de migration pour eux.
 - 
-
